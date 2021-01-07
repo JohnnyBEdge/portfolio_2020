@@ -24,12 +24,12 @@ export const TextContainer = styled.div`
 `
 export const WelcomeTitleText = styled.h1`
     color: #FCFCFC;
-    font-size: 60px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding: 10px;
+    font-size: 55px;
+    font-family: 'Gothic A1', sans-serif;
+    padding: 15px;
 `
-export const SubTitleText = styled.p`
-    color: #FCFCFC;
-    font-size: 15px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-`
+// export const SubTitleText = styled.p`
+//     color: #FCFCFC;
+//     font-size: 15px;
+//     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+// `

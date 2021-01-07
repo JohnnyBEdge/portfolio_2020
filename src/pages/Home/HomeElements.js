@@ -7,6 +7,7 @@ export const WindowContainer = styled.div`
     justify-content: center;
     align-items: center;
     background-color: #FCFCFC;
+    min-width: 375px;
 `
 export const Window = styled.div`
     width: 95%;
@@ -14,5 +15,9 @@ export const Window = styled.div`
     background-color: black;
     border-radius: 5px;
     height: 95%;
-    /* max-height: 768px; */
+
+    @media screen and (max-width: 765px){
+        width: 100%;
+        height: 100%;
+    }
 `
