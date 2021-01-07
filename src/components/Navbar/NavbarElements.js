@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import {Link} from 'react-scroll';
+import {animated} from 'react-spring';
 
 export const NavbarContainer = styled.div`
     height: 80px;
@@ -10,7 +11,7 @@ export const NavbarContainer = styled.div`
     justify-content: space-between;
 
 `
-export const HomeIcon = styled.div`
+export const HomeIcon = styled(animated.div)`
     width: 50px;
     height: 50px;
     border: solid black 1px;
@@ -28,7 +29,7 @@ export const HomeIcon = styled.div`
         transition: 0.3s all ease;
     }
 `
-export const SectionLinks = styled.ul`
+export const SectionLinks = styled(animated.ul)`
     width: 400px;
     display: flex;
     justify-content: space-between;
@@ -39,8 +40,14 @@ export const SectionLinks = styled.ul`
         display: none;
     }
 `
+export const LinkContainer = styled(animated.div)`
+
+`
 export const SectionLink = styled(Link)`
     font-size: 20px;
+    height: 25px;
+    text-align: center;
+    cursor: pointer;
 `
 export const MobileMenuIcon = styled.div`
     display: none;

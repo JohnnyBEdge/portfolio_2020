@@ -1,22 +1,48 @@
 import React from 'react';
 import {
-    NavbarContainer, HomeIcon, SectionLinks, SectionLink, MobileMenuIcon
+    NavbarContainer, HomeIcon, SectionLinks, SectionLink, MobileMenuIcon,
+    LinkContainer
 } from './NavbarElements';
 import {FaBars} from 'react-icons/fa';
-import { useTrail, animated } from 'react-spring'
+import { useSpring, animated } from 'react-spring'
 
 const Navbar = ({toggleSidebar}) => {
 
-    const trail = useTrail(linkList.length, {opacity: 1});
-    const linkList = ['About', 'Projects', 'Resume']
+
+    const prop1 = useSpring({
+        opacity: 1,
+        from: { opacity: 0 },
+        config: {friction: 220},
+        delay: 200
+      })
+    const prop2 = useSpring({
+        opacity: 1,
+        from: { opacity: 0 },
+        config: {friction: 220},
+        delay: 400
+      })
+    const prop3 = useSpring({
+        opacity: 1,
+        from: { opacity: 0 },
+        config: {friction: 220},
+        delay: 600
+      })
+
+
 
     return (
         <NavbarContainer>
-            <HomeIcon>JM</HomeIcon>
+            <HomeIcon style={prop1}>JM</HomeIcon>
             <SectionLinks>
-                {/* <SectionLink>About</SectionLink>
-                <SectionLink>Projects</SectionLink>
-                <SectionLink>Resume</SectionLink> */}
+                <LinkContainer style={prop1}>
+                    <SectionLink>About</SectionLink>
+                </LinkContainer>
+                <LinkContainer style={prop2}>
+                    <SectionLink>Projects</SectionLink>
+                </LinkContainer>
+                <LinkContainer style={prop3}>
+                    <SectionLink>Resume</SectionLink>
+                </LinkContainer>
             </SectionLinks>
             <MobileMenuIcon>
                 <FaBars 

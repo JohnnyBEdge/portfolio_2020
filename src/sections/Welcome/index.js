@@ -1,5 +1,5 @@
 import React from 'react';
-import {useSpring, animated} from 'react-spring';
+import {useSpring} from 'react-spring';
 import {
     WelcomeContainer, WelcomeTitleText, SubTitleText, TextContainer
 } from './WelcomeElements';
