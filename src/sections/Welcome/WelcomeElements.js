@@ -1,5 +1,7 @@
 import styled from 'styled-components';
-import backgroundImg from '../../assets/images/halongbay_bw.jpg'
+import backgroundImg from '../../assets/images/halongbay_bw.jpg';
+import {animated} from 'react-spring';
+
 
 export const WelcomeContainer = styled.section`
     background-image: url(${backgroundImg});
@@ -10,7 +12,7 @@ export const WelcomeContainer = styled.section`
     flex-direction: column;
     justify-content: flex-end;
 `
-export const TextContainer = styled.div`
+export const TextContainer = styled(animated.div)`
     height: 275px;
     width: 275px;
     border: solid black 2px;
