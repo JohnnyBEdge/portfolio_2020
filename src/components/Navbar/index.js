@@ -18,13 +18,13 @@ const Navbar = ({toggleSidebar}) => {
     const prop2 = useSpring({
         opacity: 1,
         from: { opacity: 0 },
-        config: {friction: 220},
+        config: {friction: 420},
         delay: 400
       })
     const prop3 = useSpring({
         opacity: 1,
         from: { opacity: 0 },
-        config: {friction: 220},
+        config: {friction: 620},
         delay: 600
       })
 
