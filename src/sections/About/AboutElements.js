@@ -12,9 +12,11 @@ export const PersonalDetails = styled.div`
     height: 70%;
 `
 export const GalleryContainer = styled.div`
+    display: flex;
     border: solid white 2px;
     width: 50%;
     height: 100%;
+    justify-content: center;
 `
 export const DetailsTextContainer = styled.div`
     display: flex;

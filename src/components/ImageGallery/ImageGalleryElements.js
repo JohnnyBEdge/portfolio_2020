@@ -1,13 +1,18 @@
 import styled from 'styled-components';
 import {animated} from 'react-spring';
+import Slider from "@farbenmeer/react-spring-slider";
 
-export const Gallery = styled(animated.div)`
-  /* position: relative;
-  top: 0;
-  left: 0; */
-  width: 100%;
+export const SliderComponent = styled(Slider)`
+    /* height: 200px;
+    width: 200px; */
+`
+export const Gallery = styled.div`
+  display: flex;
+  width: 600px;
   height: 100%;
-  background-size: cover;
-  background-position: center;
-  /* will-change: opacity; */
+`
+export const SliderImage = styled.img`
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 `
