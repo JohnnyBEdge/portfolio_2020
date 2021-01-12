@@ -14,7 +14,7 @@ const ImageGallery = () => {
         <Gallery>
             <SliderComponent
                 activeIndex={2}
-                auto={3000}
+                auto={4500}
             >
                 <SliderImage src={img1}/>
                 <SliderImage src={img2}/>
