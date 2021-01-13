@@ -2,37 +2,47 @@ import React, {useEffect, useState} from 'react'
 import { getCurrentCodewarsStats } from '../../api/codeWarsAPI';
 import {
     CodewarsContainer, CodewarsTitle, Stat, 
-    Instructions, GetStatsBtn
+    Instructions, GetStatsBtn, Loader, StatsContainer
 } from './CodewarsElements';
 
 const Codewars = () => {
-    //make API call here via button click
-    //conditionally render stat based on languages and scores retrieved from GET
+
     const [cwStats, setCWStats] = useState(null);
+    const [isLoading, setIsLoading] = useState(0);
+    const [loaded, setLoaded] = useState(0);
+
+    console.log(cwStats)
 
     const getStats = () => {
         getCurrentCodewarsStats().then((stats) => {
             setCWStats(stats);
-        })
+        }).then( setLoaded(1))
     };
-    // useEffect(() => {
-    //     getCurrentCodewarsStats().then((stats) => {
-    //         setCWStats(stats);
-    //         console.log("STATS",stats)
-    //     });
-    // }, []);
+ 
+
     return (
         <CodewarsContainer>
             <CodewarsTitle>Codewars Statistics</CodewarsTitle>
-            <Instructions>Click the button to get my latest Codewars.com stats!</Instructions>
+            
+            <Instructions loading={isLoading}>Click the button to get my latest Codewars.com stats!</Instructions>
+            <Loader/>
+            
+            
             <GetStatsBtn
-                onClick={getStats}>
+                onClick={() => {
+                    setIsLoading(1);
+                    getStats();
+                }}>
                     Get Stats!
             </GetStatsBtn>
-            
-            <Stat>Overall:</Stat>
-            <Stat>Javascript:</Stat>
-            <Stat>SQL:</Stat>
+
+            <StatsContainer loaded={loaded} loading={isLoading}>
+                <Stat>Overall:</Stat>
+                <Stat>Completed Challenges:</Stat>
+                <Stat>Javascript:</Stat>
+                <Stat>SQL:</Stat>
+            </StatsContainer>
+
         </CodewarsContainer>
     )
 }
