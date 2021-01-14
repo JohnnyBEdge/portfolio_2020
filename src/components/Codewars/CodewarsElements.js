@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-// import LoadingBubbles from '../Loading';
-
 
 export const CodewarsContainer = styled.div`
     width: 100%;
@@ -46,6 +44,3 @@ export const GetStatsBtn = styled.button`
 export const LoaderContainer = styled.div`
     display: ${({isLoading}) => (isLoading ? 'flex' : 'none')}
 `
-/* export const Loader = styled(LoadingBubbles)`
-    
-` */

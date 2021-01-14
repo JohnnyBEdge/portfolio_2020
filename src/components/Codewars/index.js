@@ -9,20 +9,49 @@ import LoadingBubbles from '../Loading';
 
 const Codewars = () => {
 
-    const [cwStats, setCWStats] = useState(null);
+    const [total, setTotal] = useState(null);
+    const [overall, setOverall] = useState(null);
+    const [languages, setLanguages] = useState([]);
+    // const [cwStats, setCWStats] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
     const [loaded, setLoaded] = useState(false);
+    const [errMsg, setErrMsg] = useState(false);
 
-    console.log(cwStats)
+    
 
-    const getStats = () => {
-        setIsLoading(true);
-        getCurrentCodewarsStats().then((stats) => {
-            setCWStats(stats);
-        }).then( setIsLoading(false))
-        .then(setLoaded(true))
+    const getStats = async() => {
+        await setIsLoading(true);
+        await getCurrentCodewarsStats().then((stats) => {
+            stats.status === 200 ? setStats(stats) : setErrMsg(true)
+        })
+        await setIsLoading(false)
+        await setLoaded(true)
     };
- 
+
+    // const getStats = () => {
+    //     setIsLoading(true);
+    //     getCurrentCodewarsStats().then((stats) => {
+    //         setStats(stats);
+    //         // setTotal(stats.data.codeChallenges.totalCompleted);
+    //         // console.log(stats.data.codeChallenges.totalCompleted)
+    //         // setOverall(stats.data.ranks.overall.name);
+    //         // setLanguages(...stats.data.ranks.languages);
+    //     }).then( setIsLoading(false))
+    //     .then(setLoaded(true))
+    // };
+
+ const setStats = (stats) => {
+    setTotal(stats.data.codeChallenges.totalCompleted);
+    console.log("total",stats.data.codeChallenges.totalCompleted)
+    setOverall(stats.data.ranks.overall.name);
+    console.log("overall",stats.data.ranks.overall.name)
+    setLanguages(stats.data.ranks.languages);
+    console.log("languages",stats.data.ranks.languages)
+ }
+
+ const languageStats = Object.keys(languages).map((lang,idx) => (
+     <p key={idx}>{lang}</p>
+ ))
 
     return (
         <CodewarsContainer>
@@ -43,13 +72,19 @@ const Codewars = () => {
                 }}>
                     Get Stats!
             </GetStatsBtn>
-
-            <StatsContainer loaded={loaded}>
-                <Stat>Overall:</Stat>
-                <Stat>Completed Challenges:</Stat>
-                <Stat>Javascript:</Stat>
-                <Stat>SQL:</Stat>
+            
+            {errMsg ? 
+                'The was an error retrieving the data; please try again.' 
+                : 
+                <StatsContainer loaded={loaded}>
+                <Stat>Overall: {overall}</Stat>
+                <Stat>Completed Challenges: {total} </Stat>
+                {languageStats}
+                {/* <Stat>Javascript:</Stat>
+                <Stat>SQL:</Stat> */}
             </StatsContainer>
+            }
+
 
         </CodewarsContainer>
     )
