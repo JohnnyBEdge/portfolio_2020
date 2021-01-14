@@ -49,10 +49,10 @@ const Codewars = () => {
     console.log("languages",stats.data.ranks.languages)
  }
 
- const languageStats = Object.keys(languages).map((lang,idx) => (
-     <p key={idx}>{lang}</p>
- ))
-
+ const arr = Object.entries(languages);
+ let item = arr.map((item) => {
+     return <Stat>{item[0].charAt(0).toUpperCase() + item[0].slice(1)} : {item[1].name}</Stat>
+ });
     return (
         <CodewarsContainer>
             <CodewarsTitle>Codewars Statistics</CodewarsTitle>
@@ -61,8 +61,6 @@ const Codewars = () => {
             <LoaderContainer isLoading={isLoading}>
                 <LoadingBubbles />
             </LoaderContainer>
-            
-            
             
             <GetStatsBtn
                 loaded={loaded}
@@ -79,9 +77,7 @@ const Codewars = () => {
                 <StatsContainer loaded={loaded}>
                 <Stat>Overall: {overall}</Stat>
                 <Stat>Completed Challenges: {total} </Stat>
-                {languageStats}
-                {/* <Stat>Javascript:</Stat>
-                <Stat>SQL:</Stat> */}
+                {item}
             </StatsContainer>
             }
 
