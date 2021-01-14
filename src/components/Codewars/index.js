@@ -2,21 +2,25 @@ import React, {useEffect, useState} from 'react'
 import { getCurrentCodewarsStats } from '../../api/codeWarsAPI';
 import {
     CodewarsContainer, CodewarsTitle, Stat, 
-    Instructions, GetStatsBtn, Loader, StatsContainer
+    Instructions, GetStatsBtn, Loader, StatsContainer,
+    LoaderContainer
 } from './CodewarsElements';
+import LoadingBubbles from '../Loading';
 
 const Codewars = () => {
 
     const [cwStats, setCWStats] = useState(null);
-    const [isLoading, setIsLoading] = useState(0);
-    const [loaded, setLoaded] = useState(0);
+    const [isLoading, setIsLoading] = useState(false);
+    const [loaded, setLoaded] = useState(false);
 
     console.log(cwStats)
 
     const getStats = () => {
+        setIsLoading(true);
         getCurrentCodewarsStats().then((stats) => {
             setCWStats(stats);
-        }).then( setLoaded(1))
+        }).then( setIsLoading(false))
+        .then(setLoaded(true))
     };
  
 
@@ -24,19 +28,23 @@ const Codewars = () => {
         <CodewarsContainer>
             <CodewarsTitle>Codewars Statistics</CodewarsTitle>
             
-            <Instructions loading={isLoading}>Click the button to get my latest Codewars.com stats!</Instructions>
-            <Loader/>
+            <Instructions loaded={loaded} >Click the button to get my latest Codewars.com stats!</Instructions>
+            <LoaderContainer isLoading={isLoading}>
+                <LoadingBubbles />
+            </LoaderContainer>
+            
             
             
             <GetStatsBtn
+                loaded={loaded}
                 onClick={() => {
-                    setIsLoading(1);
+                    setIsLoading(true);
                     getStats();
                 }}>
                     Get Stats!
             </GetStatsBtn>
 
-            <StatsContainer loaded={loaded} loading={isLoading}>
+            <StatsContainer loaded={loaded}>
                 <Stat>Overall:</Stat>
                 <Stat>Completed Challenges:</Stat>
                 <Stat>Javascript:</Stat>

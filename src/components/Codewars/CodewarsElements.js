@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import LoadingBubbles from '../Loading';
+// import LoadingBubbles from '../Loading';
 
 
 export const CodewarsContainer = styled.div`
@@ -15,9 +15,10 @@ export const CodewarsTitle = styled.h4`
     margin-bottom: 15px;
 `
 export const Instructions = styled.p`
-    display: ${({loading}) => (loading ? 'none' : 'flex')};
+    display: ${({loaded}) => (loaded ? 'none' : 'flex')};
     font-size: 15px;
     color: #FCFCFC;
+    margin: 10px;
 `
 export const StatsContainer = styled.ul`
     display: ${({loaded}) => (loaded ? 'flex' : 'none')};
@@ -31,14 +32,20 @@ export const Stat = styled.li`
     color: #FCFCFC;
 `
 export const GetStatsBtn = styled.button`
-    display: ${({loading}) => (loading ? 'none' : 'flex')};
+    display: ${({loaded}) => (loaded ? 'none' : 'flex')};
     background-color: #FCFCFC;
-    width: 80px;
+    width: 120px;
     height: 35px;
     border-radius: 25px;
     align-items: center;
     justify-content: center;
+    margin: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
 `
-export const Loader = styled(LoadingBubbles)`
-    display: ${({loaded,loading}) => (loaded && !loading ? 'none' : 'flex')}
+export const LoaderContainer = styled.div`
+    display: ${({isLoading}) => (isLoading ? 'flex' : 'none')}
 `
+/* export const Loader = styled(LoadingBubbles)`
+    
+` */

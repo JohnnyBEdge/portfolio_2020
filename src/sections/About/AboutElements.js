@@ -65,7 +65,9 @@ export const TechListItem = styled.li`
     margin-right: 20px;
 `
 export const CodewarsStatsContainer = styled.div`
-    border: solid white 2px;
     width: 40%;
     height: 100%;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
 `
