@@ -1,12 +1,26 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {
     NavbarContainer, HomeIcon, SectionLinks, SectionLink, MobileMenuIcon,
     LinkContainer
 } from './NavbarElements';
 import {FaBars} from 'react-icons/fa';
-import { useSpring, animated } from 'react-spring'
+import { useSpring, animated } from 'react-spring';
+
 
 const Navbar = ({toggleSidebar}) => {
+
+    const [scrollNav, setScrollNav] = useState(false);
+    
+    const changeNav = () => {
+
+        if(window.scrollY >= 80){
+            setScrollNav(true);
+            console.log(window.scrollY)
+
+        } else {
+            setScrollNav(false);
+        }
+    };
 
 
     const prop1 = useSpring({
@@ -28,10 +42,14 @@ const Navbar = ({toggleSidebar}) => {
         delay: 600
       })
 
-
+    useEffect(() => {
+        
+        window.addEventListener('scroll', changeNav)
+    }, [])
 
     return (
-        <NavbarContainer>
+        <>
+        <NavbarContainer scrollNav={scrollNav}>
             <HomeIcon style={prop1}>JM</HomeIcon>
             <SectionLinks>
                 <LinkContainer style={prop1}>
@@ -49,6 +67,7 @@ const Navbar = ({toggleSidebar}) => {
                     onClick={toggleSidebar}/>
             </MobileMenuIcon>
         </NavbarContainer>
+        </>
     )
 }
 

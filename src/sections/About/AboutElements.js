@@ -36,7 +36,7 @@ export const DetailsText = styled.p`
     font-size: 20px;
     line-height: 1.5;
     padding: 10px;
-    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Montserrat', sans-serif;
 `
 export const TechContainer = styled.div`
     height: 30%;

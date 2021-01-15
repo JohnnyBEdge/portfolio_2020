@@ -12,10 +12,10 @@ import {
 const Home = () => {
 
     const [openSidebar, setOpenSidebar] = useState(false);
-
     const toggleSidebar = () => {
         setOpenSidebar(!openSidebar);
     }
+
     return (
         <WindowContainer>
             <Window>

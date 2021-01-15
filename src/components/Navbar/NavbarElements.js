@@ -2,30 +2,38 @@ import styled from 'styled-components';
 import {Link} from 'react-scroll';
 import {animated} from 'react-spring';
 
+
 export const NavbarContainer = styled.div`
     height: 80px;
-    position: absolute;
-    background-color: transparent;
-    width: 95%;
+    margin-top: -80px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    /* background: ${({scrollNav}) => (scrollNav ? 'red' : 'green')}; */
+    background-color: #232222;
+    z-index: 100;
+    width: 100%;
     display: flex;
     justify-content: space-between;
+   
 
 `
 export const HomeIcon = styled(animated.div)`
     width: 50px;
     height: 50px;
-    border: solid black 1px;
+    border: solid #FCFCFC 1px;
+    /* border: solid black 1px; */
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 10px;
     font-weight: bold;
     font-size: 25px;
-    color: #202020;
+    color: #FCFCFC;
     cursor: pointer;
 
     &:hover{
-        background-color: #FCFCFC;
+        background-color: whitesmoke;
         transition: 0.3s all ease;
     }
 `
@@ -34,8 +42,7 @@ export const SectionLinks = styled(animated.ul)`
     display: flex;
     justify-content: space-between;
     padding: 15px;
-    color: #202020;
-
+    color: #FCFCFC;
     @media screen and (max-width: 768px){
         display: none;
     }

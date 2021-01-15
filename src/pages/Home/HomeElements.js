@@ -11,7 +11,6 @@ export const WindowContainer = styled.div`
 `
 export const Window = styled.div`
     width: 95%;
-    /* max-width: 1024px; */
     background-color: black;
     border-radius: 10px;
     height: 95%;
