@@ -4,6 +4,7 @@ import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
 import About from '../../sections/About';
 import Projects from '../../sections/Projects';
+import TestSlider from '../../components/TestSlider'
 
 import {
     WindowContainer, Window
@@ -27,6 +28,7 @@ const Home = () => {
                 <Welcome />
                 <About />
                 <Projects />
+                <TestSlider/>
             </Window>
         </WindowContainer>
     )
