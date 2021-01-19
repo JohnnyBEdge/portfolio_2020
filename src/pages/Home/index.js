@@ -28,7 +28,7 @@ const Home = () => {
                 <Welcome />
                 <About />
                 <Projects />
-                <TestSlider/>
+                {/* <TestSlider/> */}
             </Window>
         </WindowContainer>
     )

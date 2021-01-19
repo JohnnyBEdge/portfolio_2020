@@ -9,6 +9,27 @@ export const ProjectsContainer = styled.section`
     flex-direction: column;
     /* justify-content: space-evenly; */
 `
+export const SliderContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    align-self: center;
+
+`
+export const Project = styled.div`
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    width: 100%;
+    height: 100%;
+    border: red solid 1px;
+`
+
 export const TitleTopBorder = styled.div`
     height: 3px;
     background-color: #FCFCFC;
@@ -33,14 +54,10 @@ export const ProjTitle = styled.h3`
     text-align: center;
     margin: 10px;
 `
-export const Project = styled.div`
+export const ProjInfoContainer = styled.div`
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
     width: 100%;
-`
-export const ArrowContainer = styled.div`
-    cursor: pointer;
+    justify-content: space-evenly;
 `
 export const ProjImage = styled.img`
     width: 40%;
@@ -56,6 +73,7 @@ export const ProjInfo = styled.div`
     justify-content: center;
     align-items: center;
 `
+
 export const Info = styled.p`
     color: #FCFCFC;
     font-family: 'Montserrat', sans-serif;
@@ -74,4 +92,6 @@ export const ProjLink = styled.a`
         transition: .3s ease-in-out;
     }
 `
-
+export const ArrowContainer = styled.div`
+    cursor: pointer;
+`
