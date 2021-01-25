@@ -1,7 +1,4 @@
 import React, {useState} from 'react';
-import tempImg1 from '../../assets/images/IMG_1492.jpg';
-import tempImg2 from '../../assets/images/climb2.JPG';
-import tempImg3 from '../../assets/images/IMG_2245 (1).JPG';
 import {
 	SliderContainer, ProjInfo, Info, ProjLink,
 	ProjImage, ProjTitle, ArrowContainer, 
@@ -22,8 +19,6 @@ const Projects = () => {
     const previousProj = () => {
         setCurrent(current === 0 ? length -1 : current - 1);
 	}
-
-	console.log("CURRENT", current)
 
 
 	const project = projects.map((proj, idx) => {
