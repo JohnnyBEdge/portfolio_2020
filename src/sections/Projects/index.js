@@ -57,26 +57,24 @@ const Projects = () => {
                                 {idx === current && (
                                     <Project id={idx} key={idx} current={current}>
 
-                                                <TitleTopBorder></TitleTopBorder>
-                                                    <ProjTitle>{proj.name}</ProjTitle>
-                                                <TitleBottomBorder></TitleBottomBorder>
+                                        <TitleTopBorder></TitleTopBorder>
+                                            <ProjTitle>{proj.name}</ProjTitle>
+                                        <TitleBottomBorder></TitleBottomBorder>
+        
+                                        <ProjInfoContainer>
+                                            <ProjImage src={proj.img}/>
+                                            <ProjInfo>
+                                                <Info>{proj.desc}</Info>
+                                                <ProjLink>{proj.live}</ProjLink>
+                                            </ProjInfo>
+                                        </ProjInfoContainer>
                 
-                                                <ProjInfoContainer>
-                                                    <ProjImage src={proj.img}/>
-                                                    <ProjInfo>
-                                                        <Info>{proj.desc}</Info>
-                                                        <ProjLink>{proj.live}</ProjLink>
-                                                    </ProjInfo>
-                                                </ProjInfoContainer>
-                
-                                            </Project>
+                                    </Project>
                                 )}
 
                             </div>
                         )
                     })}
-                
-                    {/* {project} */}
 
                 <ArrowContainer onClick={nextProj}>
                     <FiChevronsRight size="3em"/>

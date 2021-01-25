@@ -8,14 +8,14 @@ export const projects = [
     },
     {
         "name": "proj2",
-        "desc": "project 2 description",
+        "desc": "proj 2 desc proj 2 desc proj 2 desc proj 2 desc proj 2 desc proj 2 desc",
         "github": "https://www.github.com",
         "live": "https://www.martin-jr.com",
         "img": "tempImg2"
     },
     {
         "name": "proj3",
-        "desc": "project 3 description",
+        "desc": "proj3 desc ",
         "github": "https://www.github.com",
         "live": "https://www.martin-jr.com",
         "img": "tempImg3"

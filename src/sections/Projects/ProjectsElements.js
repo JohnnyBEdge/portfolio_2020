@@ -7,14 +7,16 @@ export const ProjectsContainer = styled.section`
     color: white;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     /* justify-content: space-evenly; */
 `
 export const SliderContainer = styled.div`
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: center;
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     align-items: center;
     align-self: center;
 
@@ -22,12 +24,12 @@ export const SliderContainer = styled.div`
 export const Project = styled.div`
     display: flex; 
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-self: center;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* justify-self: center; */
+    /* align-self: center; */
     width: 100%;
     height: 100%;
-    border: red solid 1px;
 `
 
 export const TitleTopBorder = styled.div`
@@ -56,10 +58,11 @@ export const ProjTitle = styled.h3`
 `
 export const ProjInfoContainer = styled.div`
     display: flex;
+    justify-content: space-between;
     width: 100%;
-    justify-content: space-evenly;
 `
 export const ProjImage = styled.img`
+    min-width: 400px;
     width: 40%;
     height: auto;
     border: 5px #FCFCFC solid;
@@ -68,7 +71,8 @@ export const ProjImage = styled.img`
 export const ProjInfo = styled.div`
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 600px;
+    min-width: 500px;
     height: 350px;
     justify-content: center;
     align-items: center;
@@ -78,6 +82,8 @@ export const Info = styled.p`
     color: #FCFCFC;
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 20px;
+    padding: 10px;
+    width: 90%;
 `
 export const ProjLink = styled.a`
     color: #FCFCFC;
@@ -94,4 +100,5 @@ export const ProjLink = styled.a`
 `
 export const ArrowContainer = styled.div`
     cursor: pointer;
+    margin: 10px;
 `
