@@ -64,7 +64,7 @@ export const ProjInfoContainer = styled.div`
 export const ProjImage = styled.img`
     min-width: 400px;
     width: 40%;
-    height: auto;
+    height: 400px;
     border: 5px #FCFCFC solid;
     border-radius: 5px;
 `
@@ -85,12 +85,18 @@ export const Info = styled.p`
     padding: 10px;
     width: 90%;
 `
+export const LinkContainer = styled.div`
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+`
 export const ProjLink = styled.a`
     color: #FCFCFC;
     font-family: 'Gothic A1', sans-serif;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 20px;
     margin-top: 20px;
+    text-decoration: none;
     cursor: pointer;
 
     &:hover {

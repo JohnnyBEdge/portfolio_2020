@@ -3,12 +3,11 @@ import {
 	SliderContainer, ProjInfo, Info, ProjLink,
 	ProjImage, ProjTitle, ArrowContainer, 
 	TitleBottomBorder, TitleTopBorder, Project, 
-	ProjInfoContainer, TestDiv, ProjectsContainer
+    ProjInfoContainer, TestDiv, ProjectsContainer,
+    LinkContainer
 } from './ProjectsElements';
 import { projects } from '../../data/data';
 import {FiChevronsLeft,FiChevronsRight} from 'react-icons/fi';
-import uhaImg from '../../assets/images/projectImgs/uha.png'
-import KEGroupImg from '../../assets/images/projectImgs/climb1 copy.jpg'
 
 const Projects = () => {
     const [current, setCurrent] = useState(0);
@@ -22,26 +21,8 @@ const Projects = () => {
         setCurrent(current === 0 ? length -1 : current - 1);
 	}
 
-
-	const project = projects.map((proj, idx) => {
-		return ( 
-				<Project id={idx} key={idx} current={current}>
-					<TitleTopBorder></TitleTopBorder>
-						<ProjTitle>{proj.name}</ProjTitle>
-					<TitleBottomBorder></TitleBottomBorder>
-					<ProjInfoContainer>
-						{/* <ProjImage src={require('../../assets/images/climb1.jpg')}/> */}
-						<ProjImage src={proj.img}/>
-						<ProjInfo>
-							<Info>{proj.desc}</Info>
-							<ProjLink>{proj.live}</ProjLink>
-						</ProjInfo>
-					</ProjInfoContainer>
-				</Project>
-			)
-	})
 	return (
-        <ProjectsContainer>
+        <ProjectsContainer id="projects">
             <SliderContainer>
 
                 <ArrowContainer onClick={previousProj}>
@@ -57,11 +38,17 @@ const Projects = () => {
                                         <TitleBottomBorder></TitleBottomBorder>
         
                                         <ProjInfoContainer>
-                                            {/* <ProjImage src={'/assets/uha copy.png'}/> */}
                                             <ProjImage src={proj.img}/>
                                             <ProjInfo>
                                                 <Info>{proj.desc}</Info>
-                                                <ProjLink>{proj.live}</ProjLink>
+                                                <LinkContainer>
+                                                    <ProjLink 
+                                                        href={proj.live} 
+                                                        target="_blank">See it live!</ProjLink>
+                                                    {proj.github ? <ProjLink 
+                                                        href={proj.github} 
+                                                        target="_blank">View the code!</ProjLink> : ''}
+                                                </LinkContainer>
                                             </ProjInfo>
                                         </ProjInfoContainer>
                 
