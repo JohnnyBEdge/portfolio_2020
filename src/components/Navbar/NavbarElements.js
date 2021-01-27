@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {Link} from 'react-scroll';
+import {Link as LinkS} from 'react-scroll';
 import {animated} from 'react-spring';
 
 
@@ -50,7 +50,7 @@ export const SectionLinks = styled(animated.ul)`
 export const LinkContainer = styled(animated.div)`
 
 `
-export const SectionLink = styled(Link)`
+export const SectionLink = styled(LinkS)`
     font-size: 20px;
     height: 25px;
     text-align: center;

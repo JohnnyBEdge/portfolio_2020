@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import {
 	SliderContainer, ProjInfo, Info, ProjLink,
-	ProjImage, ProjTitle, ArrowContainer, 
+	ProjImage, ProjTitle, LArrowContainer, RArrowContainer,
 	TitleBottomBorder, TitleTopBorder, Project, 
-    ProjInfoContainer, TestDiv, ProjectsContainer,
+    ProjInfoContainer, ProjectsContainer, SectionTitle,
     LinkContainer
 } from './ProjectsElements';
 import { projects } from '../../data/data';
@@ -23,11 +23,12 @@ const Projects = () => {
 
 	return (
         <ProjectsContainer id="projects">
+            <SectionTitle>Projects</SectionTitle>
             <SliderContainer>
 
-                <ArrowContainer onClick={previousProj}>
+                <LArrowContainer onClick={previousProj}>
                     <FiChevronsLeft size="3em"/>
-                </ArrowContainer>
+                </LArrowContainer>
                     {projects.map((proj, idx) => {
                         return (
                             <div className={idx === current ? 'slide active' : 'slide'} key={idx}>
@@ -59,9 +60,9 @@ const Projects = () => {
                         )
                     })}
 
-                <ArrowContainer onClick={nextProj}>
+                <RArrowContainer onClick={nextProj}>
                     <FiChevronsRight size="3em"/>
-                </ArrowContainer>
+                </RArrowContainer>
 
                 
 

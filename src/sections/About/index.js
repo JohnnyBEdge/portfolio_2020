@@ -12,7 +12,7 @@ import {
 const About = () => {
 
     return (
-        <AboutContainer>
+        <AboutContainer id="about">
             <PersonalDetails>
                 <GalleryContainer>
                     <ImageGallery/>

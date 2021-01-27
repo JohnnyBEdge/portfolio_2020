@@ -2,9 +2,12 @@ import styled from 'styled-components';
 
 export const AboutContainer = styled.section`
     width: 100%;
-    /* height: 100%; */
+    height: 100%;
     background-color: #232222;
     color: white;
+    @media screen and (max-width: 768px){
+        height: auto;
+    }
 `
 export const PersonalDetails = styled.div`
     display: flex;

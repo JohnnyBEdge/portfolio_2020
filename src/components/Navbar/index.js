@@ -4,8 +4,8 @@ import {
     LinkContainer
 } from './NavbarElements';
 import {FaBars} from 'react-icons/fa';
-import { useSpring, animated } from 'react-spring';
-
+import { useSpring } from 'react-spring';
+import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 const Navbar = ({toggleSidebar}) => {
 
@@ -49,17 +49,30 @@ const Navbar = ({toggleSidebar}) => {
 
     return (
         <>
+        
         <NavbarContainer scrollNav={scrollNav}>
             <HomeIcon style={prop1}>JM</HomeIcon>
             <SectionLinks>
                 <LinkContainer style={prop1}>
-                    <SectionLink>About</SectionLink>
+                    <SectionLink 
+                        to='about'
+                        smooth={true}
+                        duration={500}
+                        spy={true}
+                        exact='true'
+                        offset={-80}>About</SectionLink>
                 </LinkContainer>
                 <LinkContainer style={prop2}>
-                    <SectionLink>Projects</SectionLink>
+                    <SectionLink 
+                        to='projects'
+                        smooth={true}
+                        duration={500}
+                        spy={true}
+                        exact='true'
+                        offset={-80}>Projects</SectionLink>
                 </LinkContainer>
                 <LinkContainer style={prop3}>
-                    <SectionLink>Resume</SectionLink>
+                    <SectionLink to='#'>Resume</SectionLink>
                 </LinkContainer>
             </SectionLinks>
             <MobileMenuIcon>
