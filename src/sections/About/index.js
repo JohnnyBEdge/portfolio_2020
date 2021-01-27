@@ -7,6 +7,7 @@ import {
     TechContainer, TechList, TechListItem, TechTitle,
     CodewarsStatsContainer, ListContainer
  } from './AboutElements';
+ import {techList} from '../../data/data';
 
 const About = () => {
 
@@ -26,18 +27,7 @@ const About = () => {
                 <ListContainer>
                     <TechTitle>Current Technologies:</TechTitle>
                     <TechList>
-                        <TechListItem>HTML/CSS</TechListItem>
-                        <TechListItem>JavaScript</TechListItem>
-                        <TechListItem>NodeJs</TechListItem>
-                        <TechListItem>ExpressJS</TechListItem>
-                        <TechListItem>React</TechListItem>
-                        <TechListItem>SQL</TechListItem>
-                        <TechListItem>Python</TechListItem>
-                        <TechListItem>AWS</TechListItem>
-                        <TechListItem>MongoDB</TechListItem>
-                        <TechListItem>Git/Github</TechListItem>
-                        <TechListItem>Figma</TechListItem>
-                        <TechListItem>pgAdmin</TechListItem>
+                        {techList.map(item => (<TechListItem>{item}</TechListItem>))}
                     </TechList>
                 </ListContainer>
                 <CodewarsStatsContainer>

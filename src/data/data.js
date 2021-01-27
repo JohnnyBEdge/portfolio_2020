@@ -41,5 +41,10 @@ export const projects = [
         live: "https://thelefartins.com/",
         img: "/assets/images/wedding.png"
     },
+]
 
+export const techList = [
+    'HTML/CSS', 'JavaScript', 'NodeJs', 'ExpressJs', 
+    'ReactJs', 'SQL', 'Python', 'AWS',
+    'MongoDB', 'Git/Github', 'Figma', 'pgAdmin'
 ]

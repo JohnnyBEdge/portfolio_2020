@@ -27,8 +27,8 @@ const Home = () => {
                     openSidebar={openSidebar} />
                 <Welcome />
                 <About />
-                <Projects />
-                {/* <TestSlider/> */}
+                {/* <Projects /> */}
+
             </Window>
         </WindowContainer>
     )

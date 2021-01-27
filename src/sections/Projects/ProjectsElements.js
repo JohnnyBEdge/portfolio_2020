@@ -14,20 +14,15 @@ export const ProjectsContainer = styled.section`
 export const SliderContainer = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    /* height: 100%; */
+    justify-content: space-evenly;
+    /* width: 100%; */
     align-items: center;
-    align-self: center;
+    /* align-self: center; */
 
 `
 export const Project = styled.div`
     display: flex; 
     flex-direction: column;
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* justify-self: center; */
-    /* align-self: center; */
     width: 100%;
     height: 100%;
 `
@@ -62,18 +57,17 @@ export const ProjInfoContainer = styled.div`
     width: 100%;
 `
 export const ProjImage = styled.img`
-    min-width: 400px;
-    width: 40%;
-    height: 400px;
+    width: 45%;
+    min-width: 300px;
+    height: 45%;
     border: 5px #FCFCFC solid;
     border-radius: 5px;
 `
 export const ProjInfo = styled.div`
     display: flex;
     flex-direction: column;
-    width: 600px;
-    min-width: 500px;
-    height: 350px;
+    width: 50%;
+    min-height: 350px;
     justify-content: center;
     align-items: center;
 `

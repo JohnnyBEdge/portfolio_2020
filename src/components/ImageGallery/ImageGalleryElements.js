@@ -5,8 +5,10 @@ export const SliderComponent = styled(Slider)`
 `
 export const Gallery = styled.div`
   display: flex;
-  width: 400px;
-  height: 500px;
+  width: 70%;
+  min-width: 300px;
+  height: 70%;
+  min-height: 330px;
 `
 export const SliderImage = styled.img`
   width: 100%;

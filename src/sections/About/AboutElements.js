@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const AboutContainer = styled.section`
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     background-color: #232222;
     color: white;
 `
@@ -12,6 +12,11 @@ export const PersonalDetails = styled.div`
     height: 70%;
     justify-content: center;
     align-items: center;
+
+    @media screen and (max-width: 768px){
+        flex-direction: column;
+        height: 100%;
+    }
 `
 export const GalleryContainer = styled.div`
     display: flex;
@@ -19,11 +24,18 @@ export const GalleryContainer = styled.div`
     height: 100%;
     justify-content: center;
     align-items: center;
+
+    @media screen and (max-width: 768px){
+        width: 90%;
+    }
 `
 export const DetailsTextContainer = styled.div`
     display: flex;
     flex-direction: column;
     width: 50%;
+    @media screen and (max-width: 768px){
+        width: 90%;
+    }
 `
 export const DetailsTitle = styled.h2`
     color: #FCFCFC;
@@ -42,6 +54,14 @@ export const TechContainer = styled.div`
     height: 30%;
     width: 100%;
     display: flex;
+
+    @media screen and (max-width: 768px){
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+    }
 `
 export const ListContainer = styled.div`
     width: 60%;
@@ -67,7 +87,4 @@ export const TechListItem = styled.li`
 export const CodewarsStatsContainer = styled.div`
     width: 40%;
     height: 100%;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-between; */
 `

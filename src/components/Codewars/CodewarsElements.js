@@ -11,12 +11,24 @@ export const CodewarsTitle = styled.h4`
     color: #FCFCFC;
     text-align: center;
     margin-bottom: 15px;
+
+    @media screen and (max-width: 768px){
+        margin-top: 20px;
+        width: 200px;
+    }
+
 `
 export const Instructions = styled.p`
     display: ${({loaded}) => (loaded ? 'none' : 'flex')};
     font-size: 15px;
     color: #FCFCFC;
     margin: 10px;
+
+    @media screen and (max-width: 768px){
+        width: 200px;
+        margin: 0;
+        margin-bottom: 10px;
+    }
 `
 export const StatsContainer = styled.ul`
     display: ${({loaded}) => (loaded ? 'flex' : 'none')};
@@ -24,6 +36,13 @@ export const StatsContainer = styled.ul`
     list-style: none;
     line-height: 1.5;
     margin-right: 50px;
+    
+    @media screen and (max-width: 768px){
+        width: 250px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        text-align: justify;
+    }
 `
 export const Stat = styled.li`
     font-size: 16px;
