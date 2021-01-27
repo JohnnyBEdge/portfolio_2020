@@ -9,6 +9,12 @@ export const Gallery = styled.div`
   min-width: 300px;
   height: 70%;
   min-height: 330px;
+
+  @media screen and (max-width: 768px){
+    width: 100px;
+    height: 100px;
+    margin: 20px 0;
+  }
 `
 export const SliderImage = styled.img`
   width: 100%;
