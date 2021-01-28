@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import {Link as LinkS} from 'react-scroll';
 import {Link as LinkR} from 'react-router-dom'
 import {animated} from 'react-spring';
 
@@ -63,12 +62,6 @@ export const SectionLink = styled(LinkR)`
     color: #FCFCFC;
     cursor: pointer;
 `
-// export const SectionLink = styled(LinkS)`
-//     font-size: 20px;
-//     height: 25px;
-//     text-align: center;
-//     cursor: pointer;
-// `
 export const MobileMenuIcon = styled.div`
     display: none;
 
@@ -80,6 +73,6 @@ export const MobileMenuIcon = styled.div`
         transform: translate(-100%, 60%);
         font-size: 1.8rem;
         cursor: pointer;
-        color: #2B2B2B;
+        color: #FCFCFC;
     }
 `

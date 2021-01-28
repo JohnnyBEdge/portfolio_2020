@@ -14,7 +14,6 @@ const About = () => {
 
     return (
         <AboutContainer id="about">
-            <SectionTitle>About</SectionTitle>
             <PersonalDetails >
                 <GalleryContainer >
                     <ImageGallery/>

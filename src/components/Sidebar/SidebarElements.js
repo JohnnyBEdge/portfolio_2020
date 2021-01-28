@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {Link as LinkS} from 'react-scroll';
+import {Link as LinkR} from 'react-router-dom';
 
 export const SidebarContainer = styled.aside`
     position: fixed;
@@ -26,10 +26,12 @@ export const SidebarMenu = styled.ul`
         grid-template-rows: repeat(4, 60px)
     }
 `
-export const MenuItem = styled(LinkS)`
+export const MenuItem = styled(LinkR)`
     text-align: center;
     font-size: 25px;
     list-style: none;
+    color: black;
+    text-decoration:none;
     cursor: pointer;
     padding-top: 25px;
 

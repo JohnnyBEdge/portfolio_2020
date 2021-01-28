@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
-import Welcome from '../../sections/Welcome';
+import Welcome from '../../pages/Welcome';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
-import About from '../../sections/About';
-import Projects from '../../sections/Projects';
+import About from '../../pages/About';
+import Projects from '../../pages/Projects';
 
 
 import {

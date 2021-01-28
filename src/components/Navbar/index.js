@@ -3,16 +3,11 @@ import {
     NavbarContainer, HomeIcon, SectionLinks, SectionLink, MobileMenuIcon,
     LinkContainer, IconContainer
 } from './NavbarElements';
-import {FaBars} from 'react-icons/fa';
+import {CgMenuRight} from 'react-icons/cg';
 import { useSpring } from 'react-spring';
-import { animateScroll as scroll, Element, scroller} from 'react-scroll'
 
 const Navbar = ({toggleSidebar}) => {
 
-    const scrollHome = () => {
-        console.log("SCROLL HOME")
-        scroll.scrollToTop();
-    }
 
     const prop1 = useSpring({
         opacity: 1,
@@ -24,36 +19,25 @@ const Navbar = ({toggleSidebar}) => {
     return (
         <NavbarContainer style={prop1}>
             <IconContainer to="/">
-            <HomeIcon 
-                onClick={scrollHome}>JM</HomeIcon>
+            <HomeIcon>JM</HomeIcon>
             </IconContainer>
             <SectionLinks>
                 <LinkContainer >
                     <SectionLink
-                        to="/about" 
-                        // spy={true} 
-                        // smooth={true} 
-                        // duration={500} 
-                        // exact='true'
-                        // offset={-80}
+                        to="/about"
                         >About</SectionLink>
                 </LinkContainer>
                 <LinkContainer >
                     <SectionLink 
                         to="/projects"
-                        // smooth={true}
-                        // duration={500}
-                        // spy={true}
-                        // exact='true'
-                        // offset={-80}
                         >Projects</SectionLink>
                 </LinkContainer>
                 <LinkContainer >
-                    <SectionLink to='#'>Resume</SectionLink>
+                    <SectionLink to='/resume'>Resume</SectionLink>
                 </LinkContainer>
             </SectionLinks>
             <MobileMenuIcon>
-                <FaBars 
+                <CgMenuRight 
                     onClick={toggleSidebar}/>
             </MobileMenuIcon>
         </NavbarContainer>

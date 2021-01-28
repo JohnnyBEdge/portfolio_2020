@@ -5,8 +5,6 @@ import {
 
 const Sidebar = ({openSidebar, toggleSidebar}) => {
 
-
-
     return (
         <SidebarContainer 
         openSidebar={openSidebar}
@@ -22,7 +20,7 @@ const Sidebar = ({openSidebar, toggleSidebar}) => {
                     exact='true'
                     offset={-80}>Home</MenuItem>
                 <MenuItem 
-                    to='about' 
+                    to='/about' 
                     onClick={toggleSidebar}
                     smooth={true}
                     duration={500}
@@ -30,7 +28,7 @@ const Sidebar = ({openSidebar, toggleSidebar}) => {
                     exact='true'
                     offset={-80}>About</MenuItem>
                 <MenuItem 
-                    to='projects'
+                    to='/projects'
                     onClick={toggleSidebar}
                     smooth={true}
                     duration={500}
@@ -38,7 +36,7 @@ const Sidebar = ({openSidebar, toggleSidebar}) => {
                     exact='true'
                     offset={-80}>Projects</MenuItem>
                 <MenuItem 
-                    to='resume'
+                    to='/resume'
                     onClick={toggleSidebar}
                     smooth={true}
                     duration={500}

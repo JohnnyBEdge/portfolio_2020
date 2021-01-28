@@ -11,21 +11,8 @@ export const ProjectsContainer = styled.section`
     justify-content: center;
     /* justify-content: space-evenly; */
     @media screen and (max-width: 768px){
-        /* padding-top: 50px; */
+        margin-top: 80px;
         height: auto;
-    }
-`
-export const SectionTitle = styled.h2`
-    display: none;
-    @media screen and (max-width: 768px){
-        display: flex;
-        font-size: 20px;
-        font-family: "Gothic A1", sans-serif;
-        font-size: 20px;
-        color: #FCFCFC;
-        text-align: center;
-        margin-top: 20px;
-        padding-bottom: 0;
     }
 `
 export const SliderContainer = styled.div`

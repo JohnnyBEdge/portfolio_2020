@@ -23,9 +23,7 @@ const Projects = () => {
 
 	return (
         <ProjectsContainer id="projects">
-            <SectionTitle>Projects</SectionTitle>
             <SliderContainer>
-
                 <LArrowContainer onClick={previousProj}>
                     <FiChevronsLeft size="3em"/>
                 </LArrowContainer>
