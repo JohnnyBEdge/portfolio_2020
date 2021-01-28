@@ -5,16 +5,18 @@ import {
     AboutContainer, PersonalDetails, GalleryContainer,
     DetailsTextContainer, DetailsTitle, DetailsText,
     TechContainer, TechList, TechListItem, TechTitle,
-    CodewarsStatsContainer, ListContainer
+    CodewarsStatsContainer, ListContainer, SectionTitle, El
  } from './AboutElements';
  import {techList} from '../../data/data';
 
 const About = () => {
 
+
     return (
         <AboutContainer id="about">
-            <PersonalDetails>
-                <GalleryContainer>
+            <SectionTitle>About</SectionTitle>
+            <PersonalDetails >
+                <GalleryContainer >
                     <ImageGallery/>
                 </GalleryContainer>
                 <DetailsTextContainer>

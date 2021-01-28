@@ -9,6 +9,7 @@ export const WindowContainer = styled.div`
     background-color: #FCFCFC;
     min-width: 375px;
 `
+
 export const Window = styled.div`
     width: 95%;
     background-color: black;

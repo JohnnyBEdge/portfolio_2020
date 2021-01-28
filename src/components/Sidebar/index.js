@@ -13,10 +13,38 @@ const Sidebar = ({openSidebar, toggleSidebar}) => {
         onClick={toggleSidebar}>
             
             <SidebarMenu>
-                <MenuItem onClick={toggleSidebar}>Home</MenuItem>
-                <MenuItem onClick={toggleSidebar}>About</MenuItem>
-                <MenuItem onClick={toggleSidebar}>Projects</MenuItem>
-                <MenuItem onClick={toggleSidebar}>Resume</MenuItem>
+                <MenuItem 
+                    to='/'
+                    onClick={toggleSidebar}
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    exact='true'
+                    offset={-80}>Home</MenuItem>
+                <MenuItem 
+                    to='about' 
+                    onClick={toggleSidebar}
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    exact='true'
+                    offset={-80}>About</MenuItem>
+                <MenuItem 
+                    to='projects'
+                    onClick={toggleSidebar}
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    exact='true'
+                    offset={-80}>Projects</MenuItem>
+                <MenuItem 
+                    to='resume'
+                    onClick={toggleSidebar}
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    exact='true'
+                    offset={-80}>Resume</MenuItem>
             </SidebarMenu>
         </SidebarContainer>
     )

@@ -4,11 +4,19 @@ import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
 import About from '../../sections/About';
 import Projects from '../../sections/Projects';
-import TestSlider from '../../components/TestSlider'
+
 
 import {
-    WindowContainer, Window
+    WindowContainer, Window,
 } from './HomeElements';
+
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route
+  } from "react-router-dom";
+
+
 
 const Home = () => {
 
@@ -18,6 +26,7 @@ const Home = () => {
     }
 
     return (
+        <Router>
         <WindowContainer>
             <Window>
                 <Navbar 
@@ -25,12 +34,21 @@ const Home = () => {
                 <Sidebar 
                     toggleSidebar={toggleSidebar}
                     openSidebar={openSidebar} />
-                <Welcome />
-                <About />
-                <Projects />
 
+                <Switch>
+                <Route path="/" exact> 
+                    <Welcome/>
+                </Route>
+                <Route path="/about" exact> 
+                    <About/>
+                </Route>
+                <Route path="/projects" exact> 
+                    <Projects/>
+                </Route>
+                </Switch>
             </Window>
         </WindowContainer>
+        </Router>
     )
 }
 

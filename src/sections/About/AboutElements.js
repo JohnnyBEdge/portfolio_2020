@@ -9,6 +9,21 @@ export const AboutContainer = styled.section`
         height: auto;
     }
 `
+export const SectionTitle = styled.h2`
+    display: none;
+    @media screen and (max-width: 768px){
+        display: flex;
+        font-size: 20px;
+        font-family: "Gothic A1", sans-serif;
+        font-size: 20px;
+        color: #FCFCFC;
+        justify-content: center;
+        padding-top: 20px;
+        
+
+    }
+`
+
 export const PersonalDetails = styled.div`
     display: flex;
     width: 100%;

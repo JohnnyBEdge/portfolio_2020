@@ -1,5 +1,6 @@
 import React from 'react';
 import {useSpring} from 'react-spring';
+import Navbar from '../../components/Navbar';
 import {
     WelcomeContainer, WelcomeTitleText, SubTitleText, TextContainer
 } from './WelcomeElements';
@@ -17,8 +18,6 @@ const Welcome = () => {
         <WelcomeContainer>
             <TextContainer style={props}>
                 <WelcomeTitleText>Full Stack Web Developer</WelcomeTitleText>
-                
-                {/* <SubTitleText>A fullstack web developer based out of Salt Lake City.</SubTitleText> */}
             </TextContainer>
         </WelcomeContainer>
     )
