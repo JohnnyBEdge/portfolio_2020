@@ -18,6 +18,7 @@ export const Gallery = styled.div`
 `
 export const SliderImage = styled.img`
   width: 100%;
+  max-width: 600px;
   height: 100%;
   object-fit: cover;
 `

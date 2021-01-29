@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import backgroundImg from '../../assets/images/halongbay_bw.jpg';
+import backgroundImg from '../../assets/images/halongbay_bw.webp';
 import {motion} from 'framer-motion'
 
 
