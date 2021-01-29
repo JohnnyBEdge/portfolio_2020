@@ -1,25 +1,19 @@
 import React from 'react';
-import {useSpring} from 'react-spring';
-import Navbar from '../../components/Navbar';
 import {
-    WelcomeContainer, WelcomeTitleText, SubTitleText, TextContainer
+    WelcomeContainer, WelcomeTitleText, TextContainer
 } from './WelcomeElements';
 
 const Welcome = () => {
-    
-    const props = useSpring({
-        opacity: 1,
-        from: { opacity: 0 },
-        config: {friction: 220},
-        delay: 500
-      })
 
     return (
-        <WelcomeContainer>
-            <TextContainer style={props}>
-                <WelcomeTitleText>Full Stack Web Developer</WelcomeTitleText>
-            </TextContainer>
-        </WelcomeContainer>
+            <WelcomeContainer
+                initial={{opacity: 0}}    
+                animate={{opacity: 1}}
+                exit={{opacity: 0}}>
+                <TextContainer >
+                    <WelcomeTitleText>Full Stack Web Developer</WelcomeTitleText>
+                </TextContainer>
+            </WelcomeContainer>
     )
 }
 

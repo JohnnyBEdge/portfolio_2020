@@ -8,6 +8,7 @@
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.6.0",
     "axios": "^0.21.1",
+    "framer-motion": "^3.2.2-rc.1",
     "nodemon": "^2.0.6",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
@@ -16,7 +17,6 @@
     "react-loading": "^2.0.3",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
-    "react-spring": "^8.0.27",
     "styled-components": "^5.2.1",
     "web-vitals": "^0.2.4"
   },

@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import {Link as LinkR} from 'react-router-dom'
 import {animated} from 'react-spring';
 
-
 export const NavbarContainer = styled(animated.div)`
     height: 80px;
     margin-top: -80px;

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import {motion} from 'framer-motion'
 
-export const ProjectsContainer = styled.section`
+export const ProjectsContainer = styled(motion.section)`
     width: 100%;
     height: 100%;
     background-color: #232222;
@@ -9,7 +10,6 @@ export const ProjectsContainer = styled.section`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* justify-content: space-evenly; */
     @media screen and (max-width: 768px){
         margin-top: 80px;
         height: auto;

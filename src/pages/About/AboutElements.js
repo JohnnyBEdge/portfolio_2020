@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import {motion} from 'framer-motion'
 
-export const AboutContainer = styled.section`
+export const AboutContainer = styled(motion.section)`
     width: 100%;
     height: 100%;
     background-color: #232222;
