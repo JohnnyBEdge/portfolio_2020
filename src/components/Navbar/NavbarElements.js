@@ -1,8 +1,7 @@
 import styled from 'styled-components';
-import {Link as LinkR} from 'react-router-dom'
-import {animated} from 'react-spring';
+import {NavLink as LinkR} from 'react-router-dom'
 
-export const NavbarContainer = styled(animated.div)`
+export const NavbarContainer = styled.div`
     height: 80px;
     margin-top: -80px;
     position: sticky;
@@ -60,6 +59,10 @@ export const SectionLink = styled(LinkR)`
     text-decoration: none;
     color: #FCFCFC;
     cursor: pointer;
+
+    &.active {
+        border-bottom: 3px solid #FCFCFC;
+    }
 `
 export const MobileMenuIcon = styled.div`
     display: none;

@@ -4,20 +4,11 @@ import {
     LinkContainer, IconContainer
 } from './NavbarElements';
 import {CgMenuRight} from 'react-icons/cg';
-import { useSpring } from 'react-spring';
 
 const Navbar = ({toggleSidebar}) => {
 
-
-    const prop1 = useSpring({
-        opacity: 1,
-        from: { opacity: 0 },
-        config: {friction: 220},
-        delay: 200
-      })
-
     return (
-        <NavbarContainer style={prop1}>
+        <NavbarContainer>
             <IconContainer to="/">
             <HomeIcon>JM</HomeIcon>
             </IconContainer>
